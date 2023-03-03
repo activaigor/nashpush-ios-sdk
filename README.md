@@ -20,3 +20,7 @@ import NashPush
 Push.appKey = "Channel-Token"
 Push.register()
 ```
+
+## Handle push notifications in background
+
+To enable handling notifications in background you have to add `AppGroup` and enable `Background fetch` and `Remote notifications` Background Modes
