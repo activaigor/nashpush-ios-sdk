@@ -57,6 +57,7 @@ final class PushRegistrationManager: NSObject {
         PushRegistrationManager.shared.continuation = nil
     }
 
+    @MainActor
     @objc
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
         PushRegistrationManager.shared.notificationHandler?(userInfo)

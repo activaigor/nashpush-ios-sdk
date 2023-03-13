@@ -8,6 +8,7 @@ final class NotificationCenterDelegate: NSObject, UNUserNotificationCenterDelega
         return [.sound, .badge, .banner]
     }
 
+    @MainActor
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse) async {
         notificationTapped?(response)
     }
