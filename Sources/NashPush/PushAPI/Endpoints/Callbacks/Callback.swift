@@ -44,7 +44,7 @@ struct MessageRead: Message {
 
 struct MessageClicked: Message {
     private(set) var messageId: String
-    private(set) var actionId: String
+    private(set) var actionId: Int
     private(set) var type: CallbackType = .messageClicked
 }
 

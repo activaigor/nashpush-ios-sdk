@@ -39,7 +39,7 @@ struct NotificationData: Decodable {
 
 extension NotificationData {
     struct Action: Decodable {
-        let action: String
+        let action: Int
         let clickActionData: String
     }
 }

@@ -75,7 +75,7 @@ final class PushManager {
 
     private func sendTapCallback(data: NotificationData) {
         logger.log(info: "Tapped on remote notification: \(data)")
-        let message = MessageClicked(messageId: data.messageId, actionId: data.clickActions.first?.action ?? "")
+        let message = MessageClicked(messageId: data.messageId, actionId: data.clickActions.first?.action ?? 0)
         let callback = Callback(token: data.subscriberToken, data: message)
         logger.log(info: "Sending callback")
         Task {
