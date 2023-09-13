@@ -8,7 +8,7 @@ struct Request {
     var url: URL? {
         var components = URLComponents()
         components.scheme = API.Scheme.https.rawValue
-        components.host = API.Environment.staging.rawValue
+        components.host = API.Environment.production.rawValue
         components.path = path
 
         return components.url
